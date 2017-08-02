@@ -12,3 +12,97 @@
 // .modal-backdrop.in {
 //   opacity: 0.5;
 // }
+
+BODY {
+}
+
+.contianer {
+  position: relative;
+}
+
+.hexagon {
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transform: rotate(120deg);
+       -moz-transform: rotate(120deg);
+         -o-transform: rotate(120deg);
+            transform: rotate(120deg);
+    cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+    }
+
+.hexagon-in1 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -o-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+
+.hexagon-in2 {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(http://pipsum.com/240x240.jpg);
+    visibility: visible;
+    -webkit-transform: rotate(-60deg);
+       -moz-transform: rotate(-60deg);
+         -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+    }
+.hexagon-in2:hover {
+    background-image: url(http://pipsum.com/241x241.jpg);
+    }
+
+.hexagon1 {
+    width: 400px;
+    height: 200px;
+    margin: 0 0 0 -80px;
+    }
+.hexagon2 {
+    width: 200px;
+    height: 400px;
+    /*margin: -80px 0 0 20px;*/
+    }
+.dodecagon {
+    width: 200px;
+    height: 200px;
+    margin: -80px 0 0 20px;
+    }
+
+.a {
+  left: 0;
+}
+
+.b {
+  left: 205px;
+}
+
+.c {
+  left: 410px;
+}
+
+.d {
+  left: 102px;
+}
+
+.e {
+  left: 306px;
+}
+
+.rowOne {
+  top: 0;
+}
+
+.rowTwo {
+  top: 178px; 
+}
+
+.ie .rowTwo {
+  top: 250px;
+}

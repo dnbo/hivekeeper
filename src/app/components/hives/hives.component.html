@@ -1,11 +1,15 @@
-<p>You can pass an existing component as content of the modal window. In this case remember to add content component
-as an <code>entryComponents</code> section of your <code>NgModule</code>.</p>
+<ul>
+  <li *ngFor="let hive of hives | async">
+    {{ hive.name }}
+  </li>
+</ul>
+
+<div *ngFor="let hive of hives | async" class="hexagon hexagon2 e rowTwo">
+  <div class="hexagon-in1">
+    <div class="hexagon-in2"></div>
+  </div>
+</div>
 
 <button type="button" class="btn btn-primary" (click)="openModalWithComponent()">Create modal with component</button>
 
-
-<ul>
-    <li *ngFor="let hive of hives | async">
-      {{ hive.name }}
-    </li>
-  </ul>
+<input type="text" placeholder="Firebase test" (keydown.enter)="addHive()" [(ngModel)]="newHive.name">
