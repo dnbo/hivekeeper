@@ -1,0 +1,20 @@
+@import '../../stylesheets/partials/base';
+
+.hivekeeper-logo {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.bg-inverse {
+    background-color: $navbar !important;
+}
+
+.active-link {
+    .nav-link {
+        color: #fff;
+    }
+}
+
+ul { overflow:auto; }
+li { float:left; }
+li:last-child { float:right; }

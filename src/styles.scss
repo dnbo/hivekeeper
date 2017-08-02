@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import "/app/stylesheets/main";
+
+body {
+  padding-top: 5rem;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+// .sidebar {
+//     padding-left: 0;
+//     padding-right: 0;
+// }
+
+// .sidebar {
+//     position: fixed;
+//     top: 51px;
+//     bottom: 0;
+//     left: 0;
+//     z-index: 1000;
+//     //padding: 20px;
+//     overflow-x: hidden;
+//     overflow-y: auto;
+//     border-right: 1px solid #eee;
+// }
+
+// .sidebar .nav-link {
+//     border-radius: 0;
+// }
+
+// .nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
+//     color: #887B48;
+//     cursor: default;
+//     background-color: #FFD631;
+//     //background-color: #F5BB0F;
+// }
+
+// .nav-link {
+//     display: block;
+//     padding: .5em 1em;
+// }
+
+// ul.sub-menu {
+//     border-left: 0px !important;
+// }
+
+// .sidebar {
+//     .material-icons {
+//         vertical-align: top;
+//     }
+
+//     ul.list-sidebar {
+//         margin-top: 10px !important;
+//     }
+// }
+
