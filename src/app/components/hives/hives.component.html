@@ -2,3 +2,10 @@
 as an <code>entryComponents</code> section of your <code>NgModule</code>.</p>
 
 <button type="button" class="btn btn-primary" (click)="openModalWithComponent()">Create modal with component</button>
+
+
+<ul>
+    <li *ngFor="let hive of hives | async">
+      {{ hive.name }}
+    </li>
+  </ul>

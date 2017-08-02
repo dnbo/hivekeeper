@@ -18,6 +18,7 @@ import { EmailComponent } from './components/email/email.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { MembersComponent } from './components/members/members.component';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AuthGuard } from './auth-guard.service';
@@ -66,7 +67,7 @@ export const firebaseConfig = {
     BrowserAnimationsModule,
     ModalModule.forRoot()
   ],
-  providers: [AuthGuard, AngularFireAuth, BsModalService],
+  providers: [AuthGuard, AngularFireAuth, BsModalService, AngularFireDatabase],
   bootstrap: [AppComponent],
   entryComponents: [CreatehiveComponent]
 })

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 import { CreatehiveComponent } from '../modals/createhive/createhive.component';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-hives',
@@ -9,14 +10,16 @@ import { CreatehiveComponent } from '../modals/createhive/createhive.component';
   styleUrls: ['./hives.component.scss']
 })
 export class HivesComponent implements OnInit {
-  private hives: string = 'Hives!';
+  private hives: FirebaseListObservable<any[]>;
 
 
   bsModalRef: BsModalRef;
-  constructor(private modalService: BsModalService) { }
+  constructor(private modalService: BsModalService, db: AngularFireDatabase) {
+    this.hives = db.list('/hives/cYWUyERRUEhYtL1RR610a3a3XO42');
+    console.log(this.hives);
+  }
 
   public openModalWithComponent() {
-    console.log("trying to open modal");
     const list = ['Open a modal with component', 'Pass your data', 'Do something else', '...'];
     this.bsModalRef = this.modalService.show(CreatehiveComponent);
     this.bsModalRef.content.title = 'Modal with component';
@@ -25,6 +28,8 @@ export class HivesComponent implements OnInit {
       list.push('PROFIT!!!');
     }, 2000);
   }
+
+
 
 
 
