@@ -26,6 +26,7 @@ import { HivesComponent } from './components/hives/hives.component';
 import { CreatehiveComponent } from './components/modals/createhive/createhive.component';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { AccountComponent } from './components/account/account.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyA4l582oXt_gg13U_yMQjspS6I_DkFDMtI',
@@ -48,7 +49,8 @@ export const firebaseConfig = {
     SignupComponent,
     MembersComponent,
     HivesComponent,
-    CreatehiveComponent
+    CreatehiveComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
