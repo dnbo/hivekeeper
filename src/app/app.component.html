@@ -1,12 +1,41 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar>
 <div class="main">
   <div class="container-fluid">
     <div class="row">
-      <!--<app-sidebar-menu></app-sidebar-menu>-->
+      <app-sidebar-menu></app-sidebar-menu>
       <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
         <router-outlet></router-outlet>
       </main>
     </div>
   </div>  
+</div> -->
+<div *ngIf="authenticated == false">
+  <app-login></app-login>
 </div>
-<!-- <app-footer></app-footer> -->
+<div *ngIf="authenticated">
+  <div class="page home-page">
+    <!-- Main Navbar-->
+    <header class="header">
+      <app-navbar></app-navbar>
+    </header>
+    <div class="page-content d-flex align-items-stretch">
+      <!-- Side Navbar -->
+      <div class="sidebar-container">
+        <app-sidebar-menu></app-sidebar-menu>
+      </div>
+      <div class="content-inner">
+        <!-- Page Header-->
+        <!-- <header class="page-header">
+        <div class="container-fluid">
+          <h2 class="no-margin-bottom">Dashboard</h2>
+        </div>
+      </header> -->
+        <app-page-header></app-page-header>
+        <!-- Dashboard Counts Section-->
+        <app-demo></app-demo>
+        <!-- Page Footer-->
+        <app-footer></app-footer>
+      </div>
+    </div>
+  </div>
+</div>

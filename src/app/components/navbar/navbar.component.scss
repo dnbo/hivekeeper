@@ -1,8 +1,18 @@
 @import '../../stylesheets/partials/base';
 
+.na
+
 .hivekeeper-logo {
     height: 35px;
     margin-right: 10px;
+}
+
+.navbar-brand {
+    display: -webkit-inline-box;
+    .hivekeeper-logo{
+        height: 35px;
+        margin-right: 10px;
+    }
 }
 
 .bg-inverse {

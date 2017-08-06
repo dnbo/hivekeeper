@@ -1,43 +1,176 @@
-#lock {
-    width:40%;
-    margin: 1.5em auto 4em auto;
-    display:block;
+@import "../../stylesheets/modules/colors";
+
+.login-page {
+  position: relative;
 }
 
-#fb {
-    background:#3B5998 url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/1024px-F_icon.svg.png') no-repeat 14px 6px;
-    background-size: 47px;
-    color:#fff;
+.login-page::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+  background: url(../../../assets/img/bees.jpg);
+  background-size: cover;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-#google {
-    border: 1px solid #95989A;
-    background: #fff  url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/480px-Google_%22G%22_Logo.svg.png') no-repeat 25px;
-    background-size: 25px;
+.login-page .container {
+  min-height: 100vh;
+  z-index: 1;
+  padding: 20px;
 }
 
-#email {
-    background: #ECECEC  url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/High-contrast-mail-mark-unread.svg/2000px-High-contrast-mail-mark-unread.svg.png') no-repeat 25px;
-    background-size: 25px;
+.login-page .form-holder {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 50px;
 }
 
-@media (max-width: 600px) {
-    #page {
-        padding:1em;
-    }
-    #toolbar {
-        width:90%;
-        margin-left: -45%;
-    }
-    #fb {
-        background:#3B5998;
-    }
+.login-page .form-holder .info, .login-page .form-holder .form {
+  min-height: 70vh;
+  padding: 40px;
+  height: 100%;
+}
 
-    #google {
-        background: #fff;
-    }
+.login-page .form-holder div[class*='col-'] {
+  padding: 0;
+}
 
-    #email {
-        background: #ECECEC;
-    }
+.login-page .form-holder .info {
+//   background: rgba(121, 106, 238, 0.9);
+  background: $golden-honey;
+  color: #fff;
+}
+
+.login-page .form-holder .info h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.login-page .form-holder .info p {
+  font-weight: 300;
+}
+
+.login-page .form-holder .form .form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.login-page .form-holder .form .content {
+  width: 100%;
+}
+
+.login-page .form-holder .form form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-page .form-holder .form #login, .login-page .form-holder .form #register {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.login-page .form-holder .form a.forgot-pass, .login-page .form-holder .form a.signup {
+  font-size: 0.9em;
+  color: #85b4f2;
+}
+
+.login-page .form-holder .form small {
+  color: #aaa;
+}
+
+.login-page .form-holder .form .terms-conditions label {
+  cursor: pointer;
+  color: #aaa;
+  font-size: 0.9em;
+}
+
+.login-page .copyrights {
+  width: 100%;
+  z-index: 9999;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+}
+
+/*
+* ==========================================================
+*     Facebook & Google buttons
+* ==========================================================
+*/
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+
+/* Facebook */
+.loginBtn--facebook {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
+}
+.loginBtn--facebook:before {
+  border-right: #364e92 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+
+
+/* Google */
+.loginBtn--google {
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #DD4B39;
+}
+.loginBtn--google:before {
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+.loginBtn--google:hover,
+.loginBtn--google:focus {
+  background: #E74B37;
+}
+
+.center-text {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
