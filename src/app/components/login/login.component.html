@@ -30,8 +30,8 @@
         <div class="col-lg-6 bg-white">
           <div class="form d-flex align-items-center">
             <div class="content">
-              <h5>test</h5>
-              <button class="loginBtn loginBtn--facebook">Login with Facebook</button>
+              <h2>Connect with</h2>
+              <button class="loginBtn loginBtn--facebook" (click)="loginFb()">Login with Facebook</button>
               <button class="loginBtn loginBtn--google">Login with Google</button>
               <hr/>
               <h5 class="center-text">OR sign in with your account</h5>
@@ -43,11 +43,11 @@
                 <div class="form-group">
                   <input id="login-password" type="password" name="loginPassword" required="" class="input-material" placeholder="Password">
                   <!-- <label for="login-password" class="label-material">Password</label> -->
-                </div><a id="login" href="index.html" class="btn btn-primary">Login</a>
+                </div><a id="login" class="btn btn-primary">Login</a>
                 <!-- This should be submit button but I replaced it with <a> for demo purposes-->
-              </form><a href="#" class="forgot-pass">Forgot Password?</a><br><small>Do not have an account? </small><a href="register.html"
-                class="signup">Signup</a>
-              
+              </form><a class="forgot-pass">Forgot Password?</a><br><small>Do not have an account? </small><a class="signup">Signup</a>
+
+              <!-- <a href="#" class="hexagon"><span>hexagon</span></a> -->
             </div>
           </div>
         </div>

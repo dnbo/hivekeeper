@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
     this.af.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
       .then(
       (success) => {
+        console.log('Authenticated');
         this.router.navigate(['/members']);
       }).catch(
       (err) => {
@@ -40,6 +41,7 @@ export class LoginComponent implements OnInit {
     this.af.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
       .then(
       (success) => {
+
         this.router.navigate(['/members']);
       }).catch(
       (err) => {
@@ -48,6 +50,11 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.af.authState.subscribe(auth => {
+      if (auth) {
+        this.router.navigateByUrl('/members');
+      }
+    });
   }
 
 }

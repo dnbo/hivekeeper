@@ -1,4 +1,4 @@
-<!-- <app-navbar></app-navbar>
+ <!--  <app-navbar></app-navbar>
 <div class="main">
   <div class="container-fluid">
     <div class="row">
@@ -32,10 +32,14 @@
       </header> -->
         <app-page-header></app-page-header>
         <!-- Dashboard Counts Section-->
-        <app-demo></app-demo>
+        <div id="sub-content">
+          <router-outlet></router-outlet>
+        </div>
+
+        <!-- <app-demo></app-demo> -->
         <!-- Page Footer-->
         <app-footer></app-footer>
       </div>
     </div>
   </div>
-</div>
+</div>  

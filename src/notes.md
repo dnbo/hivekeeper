@@ -1,0 +1,3 @@
+# Storing data
+## Firebase schema
+

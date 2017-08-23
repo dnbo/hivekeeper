@@ -34,7 +34,7 @@
 }
 
 .login-page .form-holder .info, .login-page .form-holder .form {
-  min-height: 70vh;
+  min-height: 50vh;
   padding: 40px;
   height: 100%;
 }
@@ -45,7 +45,7 @@
 
 .login-page .form-holder .info {
 //   background: rgba(121, 106, 238, 0.9);
-  background: $golden-honey;
+  background: $brown-black;
   color: #fff;
 }
 
@@ -173,4 +173,51 @@
     text-align: center;
     padding-top: 25px;
     padding-bottom: 25px;
+}
+
+// Hexagon
+@import '~bourbon/app/assets/stylesheets/_bourbon';
+
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+body { font: 3em 'Varela Round', sans-serif; }
+
+.hexagon {
+  $width: 300px;
+  $height: $width * 0.57736720554273;
+  $border-radius: $width / 18.75;
+  $background: #57b581;
+  
+  display: inline-block;
+  position: relative;
+  width: $width;
+  height: $height;
+  margin: $height/2 auto;
+  border-radius: #{$border-radius / 2} / #{$border-radius};
+  background: $background;
+  text-align: center;
+  text-decoration: none;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+  }
+  &:before {
+    @include transform(rotate(60deg));
+  }
+  &:after {
+    @include transform(rotate(-60deg));
+  }
+  
+  > span {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    line-height: $height;
+  }
 }

@@ -30,9 +30,14 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { AccountComponent } from './components/account/account.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { DemoComponent } from './components/demo/demo.component';
+import { HomeComponent } from './components/home/home.component';
 
 export const firebaseConfig = {
-
+  apiKey: 'AIzaSyA4l582oXt_gg13U_yMQjspS6I_DkFDMtI',
+  authDomain: 'hivekeeper-f1b4f.firebaseapp.com',
+  databaseURL: 'https://hivekeeper-f1b4f.firebaseio.com',
+  storageBucket: 'hivekeeper-f1b4f.appspot.com',
+  messagingSenderId: '990227699678'
 };
 
 @NgModule({
@@ -51,7 +56,8 @@ export const firebaseConfig = {
     CreatehiveComponent,
     AccountComponent,
     PageHeaderComponent,
-    DemoComponent
+    DemoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +70,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     routes,
     FormsModule,
-    BrowserAnimationsModule,
+    // BrowserAnimationsModule,
     ModalModule.forRoot()
   ],
   providers: [AuthGuard, AngularFireAuth, BsModalService, AngularFireDatabase],
