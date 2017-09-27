@@ -9,10 +9,10 @@
     </div>
   </div>  
 </div> -->
-<div *ngIf="authenticated == false">
+<!--<div *ngIf="authenticated == false">
   <app-login></app-login>
-</div>
-<div *ngIf="authenticated">
+</div>-->
+<!--<div *ngIf="authenticated">-->
   <div class="page home-page">
     <!-- Main Navbar-->
     <header class="header">
@@ -20,7 +20,7 @@
     </header>
     <div class="page-content d-flex align-items-stretch">
       <!-- Side Navbar -->
-      <div class="sidebar-container">
+      <div class="sidebar-container" [hidden]="sideNavHidden">
         <app-sidebar-menu></app-sidebar-menu>
       </div>
       <div class="content-inner">
@@ -42,4 +42,4 @@
       </div>
     </div>
   </div>
-</div>  
+<!--</div>  -->
